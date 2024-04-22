@@ -1,0 +1,65 @@
+@media (max-width: 768px) {
+  main {
+    padding: 0 0.5em;
+  }
+  #name {
+    font-size: 2em !important;
+  }
+
+  .expertise__heading {
+    font-size: 2em !important ;
+  }
+  .expertise-container {
+    flex-direction: column;
+    align-items: center;
+  }
+  .expertise-item {
+    width: 20em !important;
+    padding: 0 2em !important;
+  }
+
+  .work-container {
+    width: 100% !important;
+    grid-template-columns: auto !important;
+  }
+  .work__item {
+    width: 100% !important;
+    scale: 0.9 !important;
+  }
+
+  .work__item .tools {
+    top: 1.5em !important;
+    right: 1.5em !important;
+  }
+
+  .work__item .tools .tools__item {
+    font-size: 1em !important;
+  }
+  .project-title {
+    margin-left: 0.5em !important;
+  }
+  /*  */
+  /*  */
+  /*  */
+  /*  */
+  /*  */
+  /*  */
+  /*  */
+  /*  */
+  /*  */
+
+  .work__item:hover {
+    scale: 0.95 !important;
+  }
+}
+
+@media (min-width: 1080px) {
+  #titles {
+    font-size: 2em;
+  }
+}
+@media (min-width: 1800px) {
+  .work-container {
+    grid-template-columns: auto auto auto !important;
+  }
+}
