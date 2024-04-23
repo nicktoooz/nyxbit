@@ -1,6 +1,23 @@
 @import url(../stylesheets/base.css);
-@import url(../fonts/fonts.css);
 @import url(../stylesheets/mobile.css);
+
+@font-face {
+  font-family: 'Tusker';
+  src: url(../fonts/tusker-grotesk-5700-bold.ttf);
+}
+@font-face {
+  font-family: 'Apercu';
+  src: url(../fonts/apercu_regular_pro.otf);
+}
+
+@font-face {
+  font-family: 'Apercu Medium';
+  src: url(../fonts/apercu_medium_pro.otf);
+}
+@font-face {
+  font-family: 'Apercu Bold';
+  src: url(../fonts/apercu_bold_pro.otf);
+}
 
 *::-webkit-scrollbar {
   display: none;
