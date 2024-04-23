@@ -91,11 +91,13 @@ main {
 }
 .blur-data-1 {
   top: 50%;
+  animation: pulse 3s linear alternate infinite;
   box-shadow: 0 0 10em 5em rgba(17, 0, 255, 0.202);
   left: 30%;
 }
 .blur-data-2 {
   top: 40%;
+  animation: pulse 2s linear alternate infinite;
   box-shadow: 0 0 6em 4em rgba(17, 0, 255, 0.202);
   right: 30%;
 }
@@ -125,6 +127,15 @@ main {
 .hero a img.original {
   width: 0 !important;
   height: 4em;
+}
+
+@keyframes pulse {
+  from {
+    opacity: 0.2;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 @keyframes bounce {
