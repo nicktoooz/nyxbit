@@ -21,6 +21,7 @@
   .work-container {
     width: 100% !important;
     grid-template-columns: auto !important;
+    gap: 0 !important;
   }
   .work__item {
     width: 100% !important;
