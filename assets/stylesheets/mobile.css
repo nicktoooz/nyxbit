@@ -14,6 +14,12 @@
   .hero__content {
     transform: translateY(-5em);
   }
+  .blur-data-1 {
+    box-shadow: 0 0 7em 4em rgba(17, 0, 255, 0.202) !important;
+  }
+  .blur-data-2 {
+    box-shadow: 0 0 5em 3em rgba(17, 0, 255, 0.202) !important;
+  }
 
   .heading {
     font-size: 2em !important ;
@@ -49,15 +55,15 @@
     margin-left: 0.5em !important;
   }
 
-.my-contact {
-  flex-direction: column;
-  align-items: center;
-  padding: 0 !important;
-}
-.my-contact .start,
-.my-contact .end{
-  width: 100% !important;
-}
+  .my-contact {
+    flex-direction: column;
+    align-items: center;
+    padding: 0 !important;
+  }
+  .my-contact .start,
+  .my-contact .end {
+    width: 100% !important;
+  }
 
   /*  */
   /*  */

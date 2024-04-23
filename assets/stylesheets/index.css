@@ -84,6 +84,21 @@ main {
   position: relative;
   color: #f7f7f7;
 }
+.hero-blur {
+  background-color: blue;
+  position: absolute;
+  animation: fadeIn 4s ease forwards;
+}
+.blur-data-1 {
+  top: 50%;
+  box-shadow: 0 0 10em 5em rgba(17, 0, 255, 0.202);
+  left: 30%;
+}
+.blur-data-2 {
+  top: 40%;
+  box-shadow: 0 0 6em 4em rgba(17, 0, 255, 0.202);
+  right: 30%;
+}
 
 .hero__content {
   text-align: center;
@@ -167,6 +182,7 @@ main {
 .expertise-item {
   height: 20em;
   width: 24em;
+  border: 5px solid #ffffff0f;
   background-color: rgba(255, 255, 255, 0.064);
   display: grid;
   border-radius: 10px;
@@ -212,6 +228,7 @@ main {
   height: 45em;
   position: relative;
   color: #f2f2f2;
+  border: 5px solid #ffffff0f;
   overflow: hidden;
   border-radius: 15px;
   opacity: 0;
@@ -308,6 +325,6 @@ main {
   position: absolute;
   z-index: -1;
   border-radius: 50%;
-  box-shadow: 0 0 10em 5em rgba(255, 255, 255, 0.081);
+  box-shadow: 0 0 10em 5em rgba(17, 0, 255, 0.081);
   transform: translateY(-4em);
 }
