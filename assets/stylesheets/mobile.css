@@ -3,7 +3,16 @@
     padding: 0 0.5em;
   }
   #name {
-    font-size: 2em !important;
+    font-size: 4em !important;
+  }
+  header nav {
+    gap: 2em !important;
+  }
+  header nav a {
+    font-size: 1em !important;
+  }
+  .hero__content {
+    transform: translateY(-5em);
   }
 
   .heading {
@@ -39,6 +48,17 @@
   .project-title {
     margin-left: 0.5em !important;
   }
+
+.my-contact {
+  flex-direction: column;
+  align-items: center;
+  padding: 0 !important;
+}
+.my-contact .start,
+.my-contact .end{
+  width: 100% !important;
+}
+
   /*  */
   /*  */
   /*  */

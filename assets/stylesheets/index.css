@@ -32,7 +32,7 @@ header {
   align-items: center;
   box-sizing: border-box;
   padding: 0 2em;
-  border-bottom: 1px solid gray;
+  border-bottom: 1px solid #ffffff16;
 }
 
 .logo {
@@ -44,9 +44,11 @@ header {
 header nav {
   display: flex;
   justify-content: center;
-  gap: 2em;
+  gap: 5em;
 }
 header nav a {
+  font-family: 'Apercu Medium';
+  font-size: 1.5em;
   color: #f2f2f2;
 }
 
@@ -58,16 +60,71 @@ main {
 
 .hero {
   height: 95svh;
-  display: grid;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
   color: #f7f7f7;
-  place-items: center;
 }
+
 .hero__content {
   text-align: center;
+  z-index: 1;
+  transform: translateY(-3em);
+}
+.hero a {
+  position: absolute;
+  bottom: 15%;
+  width: 4em;
+  height: 4em;
+  opacity: 0;
+  display: grid;
+  place-items: center;
+  transition: width 1s ease;
+  animation: fadeIn 1s ease 2s forwards, bounce 1s ease-in-out infinite;
+}
+
+#extend_btn {
+  width: 100%;
+  transition: width 500ms ease;
+}
+
+.hero a img.original {
+  width: 0 !important;
+  height: 4em;
+}
+
+@keyframes bounce {
+  0% {
+    transform: translateY(10px);
+  }
+  50% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(10px);
+  }
 }
 #name {
   font-size: 6vw;
+  animation: fadeIn 2s ease;
   font-family: 'Apercu Bold';
+}
+#titles {
+  opacity: 0;
+  animation: fadeIn 2s ease forwards;
+  animation-delay: 1s;
+}
+@keyframes fadeIn {
+  from {
+    transform: translateY(-0.3em);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }
 .expertise {
   display: flex;
@@ -189,8 +246,20 @@ main {
 }
 
 .my-contact {
+  color: #f2f2f2;
+  display: flex;
+  justify-content: center;
+  padding: 0 5%;
+}
+.my-contact .start,
+.my-contact .end {
+  border: 1px solid white;
   height: 30em;
-  padding: 5em 0;
+  width: 100%;
+}
+.my-contact .start {
+}
+.my-contact .end {
 }
 /*  */
 /*  */
