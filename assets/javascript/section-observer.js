@@ -4,7 +4,7 @@ const sectionObserver = new IntersectionObserver(
   (entries) => {
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
-        history.pushState(null, '', `${location.origin}#${entry.target.id}`);
+        history.pushState(null, '', `${location.origin}#${entry.target.id !== 'home' ? entry.target.id : ''}`);
       }
     });
   },
