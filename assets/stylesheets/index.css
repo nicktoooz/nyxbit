@@ -24,7 +24,10 @@ body {
 header {
   height: 5em;
   background-color: #080808;
+  z-index: 9999;
   display: flex;
+  position: sticky;
+  top: 0;
   justify-content: center;
   align-items: center;
   box-sizing: border-box;
@@ -74,9 +77,10 @@ main {
   padding: 5em 0;
 }
 
-.expertise__heading {
-  font-size: 3em;
-  margin-bottom: 1.5em;
+.heading {
+  font-size: 4em;
+  font-family: 'Apercu Bold';
+  margin: 1em 0;
 }
 
 .expertise-container {
@@ -94,6 +98,12 @@ main {
   border-radius: 10px;
   place-items: center;
   padding: 0 3em;
+  opacity: 0;
+  transition: 2s ease;
+}
+.expertise-item.item-active,
+.work__item.item-active {
+  opacity: 1;
 }
 .expertise-item__start {
   display: flex;
@@ -130,7 +140,8 @@ main {
   color: #f2f2f2;
   overflow: hidden;
   border-radius: 15px;
-  transition: 200ms ease;
+  opacity: 0;
+  transition: opacity 2s ease, scale 200ms ease;
   background-color: rgba(255, 255, 255, 0.064);
 }
 .work__item .tools {
@@ -175,6 +186,11 @@ main {
 
 .work__item:hover > img {
   scale: 1.2;
+}
+
+.my-contact {
+  height: 30em;
+  padding: 5em 0;
 }
 /*  */
 /*  */
