@@ -1,0 +1,171 @@
+/* Reset all margins, padding, and borders */
+@import url('https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap');
+
+*::-webkit-scrollbar {
+  display: none;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+  color: inherit;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+html,
+body,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ul,
+ol,
+li,
+dl,
+dd,
+dt,
+blockquote,
+address {
+  font-family: inherit;
+  font-size: 100%;
+  font-weight: normal;
+}
+
+/* Reset list styles */
+ul,
+ol {
+  list-style: none;
+}
+
+/* Remove default text decoration */
+a {
+  text-decoration: none;
+}
+
+/* Remove default styles for form elements */
+input,
+textarea,
+select,
+button {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+}
+
+/* Reset display styles */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+/* Remove default styling for table elements */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* Reset image styles */
+img {
+  display: inline-block;
+  border: 0;
+}
+
+/* Reset iframe styles */
+iframe {
+  border: 0;
+}
+
+/* Remove default styling for input types */
+button,
+input,
+select,
+textarea {
+  margin: 0;
+  border: none;
+  outline: none;
+  background: none;
+  -webkit-appearance: none;
+}
+
+/* Reset styling for code elements */
+code,
+pre {
+  font-family: monospace, monospace;
+  font-size: 1em;
+}
+
+/* Reset styling for embed elements */
+embed,
+object,
+video {
+  max-width: 100%;
+}
+
+/* Reset styling for canvas elements */
+canvas {
+  display: inline-block;
+}
+
+/* Reset styling for audio elements */
+audio {
+  display: inline-block;
+}
+
+/* Reset styling for hr elements */
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+  padding: 0;
+}
+
+/* Reset styling for progress elements */
+progress {
+  display: inline-block;
+  vertical-align: baseline;
+}
+
+/* Reset styling for meter elements */
+meter {
+  display: inline-block;
+  vertical-align: baseline;
+}
+
+/* Reset styling for mark elements */
+mark {
+  background-color: transparent;
+}
+
+/* Reset styling for time elements */
+time {
+  font-style: normal;
+}
+
+/* Reset styling for ruby elements */
+ruby,
+rt,
+rp {
+  display: ruby;
+  unicode-bidi: isolate;
+}
