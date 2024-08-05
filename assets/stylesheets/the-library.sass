@@ -1,0 +1,102 @@
+@import './base.css'
+
+* 
+	color: #f7f7f7
+	font-family: 'Urbanist'
+
+body 
+	background-color: #151515
+
+header 
+	height: 4em
+	padding: 0 1.5em
+	display: grid
+	position: sticky
+	top: 0
+	z-index: 999
+	place-items: center
+	background-color: #121212
+	border-bottom: 1px solid #f7f7f735
+
+	nav 
+		display: flex
+		gap: 1em
+
+.heading
+	font-size: 2em
+
+.hero
+	display: flex
+	margin-top: 2em
+	margin-bottom: 2em
+	gap: 4em
+	justify-content: center
+
+	.hero-image
+		aspect-ratio: 1/1
+		width: 20em
+
+	.details
+		max-width: 30em
+		width: 100%
+		padding: 1em 1em
+		display: flex
+		flex-direction: column
+		justify-content: space-evenly
+		
+		.project-tools
+			display: flex
+			flex-wrap: wrap
+			gap: 8px
+			
+			.project-tools__item
+				border: 1px solid white
+				padding: .2em .8em
+				border-radius: 4px
+
+		.project-title
+			font-size: 2em
+		
+.description
+	background: #272727
+	padding: 3em 0
+	text-align: center
+	
+	.content
+		max-width: 40em
+		margin: auto
+
+.gallery
+	height: 20em
+	padding: 3em
+	text-align: center
+	
+	.gallery-container
+
+		.gallery-container__item
+			display: inline-block
+			aspect-ratio: 9/16
+			width: 15em
+			background: aqua
+
+
+
+@media (max-width: 768px) 
+	header 
+		padding: 0 1em
+
+	.hero 
+		flex-direction: column
+		align-items: center
+		margin-top: 0
+
+		.hero-image 
+			width: 100%
+	
+		.details 
+			padding: 2em
+			gap: 2em
+			max-width: 100%
+
+	.description
+		padding: 2em

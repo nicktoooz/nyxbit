@@ -1,12 +1,13 @@
-@import url(./base.css);
+@import './base.css';
 * {
   color: #f7f7f7;
-  font-family: 'Urbanist';
+  font-family: "Urbanist";
 }
+
 body {
-  background-color: #262626;
+  background-color: #151515;
 }
-/* HEADER START */
+
 header {
   height: 4em;
   padding: 0 1.5em;
@@ -16,16 +17,90 @@ header {
   z-index: 999;
   place-items: center;
   background-color: #121212;
-  border-bottom: 1px solid #f7f7f735;
+  border-bottom: 1px solid rgba(247, 247, 247, 0.2078431373);
 }
 header nav {
   display: flex;
   gap: 1em;
 }
-/* HEADER END */
 
-@media (min-width: 1080px) {
-  header nav {
-    gap: 5em;
-  }
+.heading {
+  font-size: 2em;
 }
+
+.hero {
+  display: flex;
+  margin-top: 2em;
+  margin-bottom: 2em;
+  gap: 4em;
+  justify-content: center;
+}
+.hero .hero-image {
+  aspect-ratio: 1/1;
+  width: 20em;
+}
+.hero .details {
+  max-width: 30em;
+  width: 100%;
+  padding: 1em 1em;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+.hero .details .project-tools {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.hero .details .project-tools .project-tools__item {
+  border: 1px solid white;
+  padding: 0.2em 0.8em;
+  border-radius: 4px;
+}
+.hero .details .project-title {
+  font-size: 2em;
+}
+
+.description {
+  background: #272727;
+  padding: 3em 0;
+  text-align: center;
+}
+.description .content {
+  max-width: 40em;
+  margin: auto;
+}
+
+.gallery {
+  height: 20em;
+  padding: 3em;
+  text-align: center;
+}
+.gallery .gallery-container .gallery-container__item {
+  display: inline-block;
+  aspect-ratio: 9/16;
+  width: 15em;
+  background: aqua;
+}
+
+@media (max-width: 768px) {
+  header {
+    padding: 0 1em;
+  }
+  .hero {
+    flex-direction: column;
+    align-items: center;
+    margin-top: 0;
+  }
+  .hero .hero-image {
+    width: 100%;
+  }
+  .hero .details {
+    padding: 2em;
+    gap: 2em;
+    max-width: 100%;
+  }
+  .description {
+    padding: 2em;
+  }
+}/*# sourceMappingURL=the-library.css.map */
