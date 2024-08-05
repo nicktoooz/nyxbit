@@ -26,6 +26,7 @@ header nav {
 
 .heading {
   font-size: 2em;
+  padding: 1em 0;
 }
 
 .hero {
@@ -34,10 +35,15 @@ header nav {
   margin-bottom: 2em;
   gap: 4em;
   justify-content: center;
+  padding: 0 3em;
+  position: relative;
 }
 .hero .hero-image {
   aspect-ratio: 1/1;
   width: 20em;
+  position: relative;
+  z-index: 1;
+  justify-content: center;
 }
 .hero .details {
   max-width: 30em;
@@ -59,6 +65,17 @@ header nav {
 }
 .hero .details .project-title {
   font-size: 2em;
+  font-weight: 500;
+}
+.hero .details .project-type {
+  color: rgba(255, 255, 255, 0.5490196078);
+  margin: 3px 0;
+}
+.hero .details .project-year {
+  color: rgba(255, 255, 255, 0.7450980392);
+}
+.hero .details .project-short-description {
+  color: rgba(255, 255, 255, 0.7568627451);
 }
 
 .description {
@@ -73,14 +90,15 @@ header nav {
 
 .gallery {
   height: 20em;
-  padding: 3em;
   text-align: center;
 }
 .gallery .gallery-container .gallery-container__item {
   display: inline-block;
-  aspect-ratio: 9/16;
-  width: 15em;
-  background: aqua;
+  aspect-ratio: 9/15;
+  width: 12em;
+}
+.gallery .gallery-container .gallery-container__item img {
+  width: 100%;
 }
 
 @media (max-width: 768px) {
