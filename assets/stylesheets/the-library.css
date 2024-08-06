@@ -35,7 +35,7 @@ header nav {
   margin-bottom: 2em;
   gap: 4em;
   justify-content: center;
-  padding: 0 3em;
+  padding: 0 2em;
   position: relative;
 }
 .hero .hero-image {
@@ -88,7 +88,6 @@ header nav {
 }
 
 .gallery {
-  height: 20em;
   text-align: center;
 }
 .gallery .gallery-container .gallery-container__item {
@@ -98,6 +97,97 @@ header nav {
 }
 .gallery .gallery-container .gallery-container__item img {
   width: 100%;
+}
+
+.contact {
+  background-color: rgba(247, 247, 247, 0.0941176471);
+}
+
+.contact-grid {
+  display: grid;
+  width: 100%;
+  padding: 5em 1em;
+  grid-template-columns: auto auto;
+  max-width: 100em;
+}
+
+.contact-grid__item {
+  flex: 1;
+}
+
+.contact-grid__item.start {
+  display: grid;
+  align-content: center;
+  gap: 2em;
+}
+
+.contact-grid__item.end {
+  display: flex;
+  gap: 2em;
+  justify-self: end;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.avatar {
+  aspect-ratio: 1/1;
+  width: 8em;
+  -o-object-fit: cover;
+     object-fit: cover;
+  background-color: #f7f7f7;
+  border-radius: 9999px;
+}
+
+.socials {
+  display: flex;
+  gap: 1em;
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+.social__item {
+  aspect-ratio: 1/1;
+  width: 3em;
+}
+
+.start-info {
+  display: flex;
+  gap: 2em;
+  align-items: center;
+}
+
+.contact-name {
+  font-size: 2.5em;
+  font-weight: 700;
+}
+
+.contact-grid__item.end h1 {
+  font-size: 2.5em;
+  font-weight: 700;
+}
+
+.contact-info {
+  display: flex;
+  gap: 5em;
+}
+
+.contact-info .label {
+  font-size: 1.8em;
+  margin-bottom: 0.5em;
+}
+
+.contact-detail {
+  font-size: 1.4em;
+  position: relative;
+}
+
+.contact-detail::before {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  height: 5px;
+  width: 100%;
+  background-color: white;
 }
 
 @media (max-width: 768px) {
@@ -113,11 +203,32 @@ header nav {
     width: 100%;
   }
   .hero .details {
-    padding: 2em;
     gap: 2em;
     max-width: 100%;
   }
   .description {
     padding: 2em;
+  }
+  .contact-grid {
+    grid-template-columns: auto;
+    gap: 5em;
+  }
+  .contact-grid__item.start {
+    justify-items: center;
+  }
+  .contact-grid__item.end {
+    justify-self: center;
+  }
+  .socials {
+    justify-content: center;
+  }
+  .contact-info {
+    flex-direction: column;
+  }
+  .start-info {
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+    text-align: center;
   }
 }/*# sourceMappingURL=the-library.css.map */
