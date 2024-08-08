@@ -59,6 +59,7 @@ header nav {
 }
 .hero .details .project-tools .project-tools__item {
   border: 1px solid white;
+  opacity: 0.7;
   padding: 0.2em 0.8em;
   border-radius: 4px;
 }
@@ -118,6 +119,7 @@ header nav {
 .contact-grid__item.start {
   display: grid;
   align-content: center;
+  justify-self: center;
   gap: 2em;
 }
 
@@ -231,4 +233,4 @@ header nav {
     gap: 2em;
     text-align: center;
   }
-}/*# sourceMappingURL=the-library.css.map */
+}/*# sourceMappingURL=work.css.map */
