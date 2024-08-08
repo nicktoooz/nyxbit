@@ -10,10 +10,8 @@
     <script defer src="./assets/javascript/section-observer.js"></script>
     <script defer src="./assets/javascript/work-anim.js"></script>
     <script defer src="https://cdn.vercel-insights.com/v1/script.js"></script>
-    <script
-      defer
-      src="https://nyxbit.vercel.app/_vercel/speed-insights/script.js"
-    ></script>
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script defer src="https://nyxbit.vercel.app/_vercel/speed-insights/script.js"></script>
   </head>
   <body>
     <header>
@@ -31,16 +29,11 @@
           <div>
             <h1 class="name">DOMINIC ENRIQUEZ</h1>
             <p class="titles">
-              <span>Web Developer</span><span>Mobile Developer</span
-              ><span>Graphic Designer</span>
+              <span id="element"></span>
             </p>
           </div>
           <a href="#expertise">
-            <img
-              id="next-btn"
-              src="./assets/images/extend.png"
-              style="filter: invert()"
-            />
+            <img id="next-btn" src="./assets/images/extend.png" style="filter: invert()" />
           </a>
         </div>
       </section>
@@ -50,48 +43,24 @@
           <div class="expertise-flex">
             <div class="expertise-flex__item">
               <div class="start">
-                <img
-                  class="exp-icon"
-                  src="./assets/images/frontend.png"
-                  style="filter: invert()"
-                  alt=""
-                />
+                <img class="exp-icon" src="./assets/images/frontend.png" style="filter: invert()" alt="" />
                 <h2 class="exp-title">Frontend Development</h2>
               </div>
-              <p>
-                Passionate about UI/UX. Proficient in HTML, CSS,
-                JavaScript/TypeScript, React and NextJS framework.
-              </p>
+              <p>Passionate about UI/UX. Proficient in HTML, CSS, JavaScript/TypeScript, React and NextJS framework.</p>
             </div>
             <div class="expertise-flex__item">
               <div class="start">
-                <img
-                  class="exp-icon"
-                  src="./assets/images/backend.png"
-                  style="filter: invert()"
-                  alt=""
-                />
+                <img class="exp-icon" src="./assets/images/backend.png" style="filter: invert()" alt="" />
                 <h2 class="exp-title">Backend Development</h2>
               </div>
-              <p>
-                Experienced in creating backend services in JavaScript, Python,
-                Java, PHP with SQL and NoSQL databases
-              </p>
+              <p>Experienced in creating backend services in JavaScript, Python, Java, PHP with SQL and NoSQL databases</p>
             </div>
             <div class="expertise-flex__item">
               <div class="start">
-                <img
-                  class="exp-icon"
-                  src="./assets/images/android.png"
-                  style="filter: invert()"
-                  alt=""
-                />
+                <img class="exp-icon" src="./assets/images/android.png" style="filter: invert()" alt="" />
                 <h2 class="exp-title">Android Development</h2>
               </div>
-              <p>
-                Skilled in developing mobile app solutions using Android Studio
-                and Flutter Framework
-              </p>
+              <p>Skilled in developing mobile app solutions using Android Studio and Flutter Framework</p>
             </div>
           </div>
         </div>
@@ -192,36 +161,11 @@
               </div>
             </div>
             <div class="socials">
-              <a href=""
-                ><img
-                  src="./assets/images/linkedin.png"
-                  alt=""
-                  class="social__item"
-              /></a>
-              <a href=""
-                ><img
-                  src="./assets/images/github.png"
-                  alt=""
-                  class="social__item"
-              /></a>
-              <a href=""
-                ><img
-                  src="./assets/images/facebook.png"
-                  alt=""
-                  class="social__item"
-              /></a>
-              <a href=""
-                ><img
-                  src="./assets/images/instagram.png"
-                  alt=""
-                  class="social__item"
-              /></a>
-              <a href=""
-                ><img
-                  src="./assets/images/youtube.png"
-                  alt=""
-                  class="social__item"
-              /></a>
+              <a href=""><img src="./assets/images/linkedin.png" alt="" class="social__item" /></a>
+              <a href=""><img src="./assets/images/github.png" alt="" class="social__item" /></a>
+              <a href=""><img src="./assets/images/facebook.png" alt="" class="social__item" /></a>
+              <a href=""><img src="./assets/images/instagram.png" alt="" class="social__item" /></a>
+              <a href=""><img src="./assets/images/youtube.png" alt="" class="social__item" /></a>
             </div>
           </div>
           <div class="contact-grid__item end">
@@ -229,15 +173,11 @@
             <div class="contact-info">
               <div class="contact-1">
                 <p class="label">Email:</p>
-                <a href="mailto:nickenriquez23@gmail.com" class="contact-detail"
-                  >nickenriquez23@gmail.com</a
-                >
+                <a href="mailto:nickenriquez23@gmail.com" class="contact-detail">nickenriquez23@gmail.com</a>
               </div>
               <div class="contact-2">
                 <p class="label">Phone:</p>
-                <a href="tel:+639566484626" class="contact-detail"
-                  >+63&nbsp;956&nbsp;648&nbsp;4626</a
-                >
+                <a href="tel:+639566484626" class="contact-detail">+63&nbsp;956&nbsp;648&nbsp;4626</a>
               </div>
             </div>
           </div>
@@ -246,16 +186,25 @@
     </main>
     <script>
       VANTA.NET({
-        el: ".hero",
+        el: '.hero',
         mouseControls: true,
         touchControls: true,
         gyroControls: false,
         minHeight: 200.0,
         minWidth: 200.0,
-        color: "#444",
-        backgroundColor: "#151515",
+        color: '#444',
+        backgroundColor: '#151515',
       });
-      document.querySelector(".hero canvas").classList.add("active");
+      var typed = new Typed('#element', {
+        strings: ['WEB DEVELOPER', 'MOBILE DEVELOPER', 'GRAPHIC DESIGNER'],
+        typeSpeed: 70,
+        backSpeed: 70,
+        backDelay: 1000,
+        loop: true,
+        showCursor: true,
+        cursorChar: '|',
+      });
+      document.querySelector('.hero canvas').classList.add('active');
     </script>
   </body>
 </html>
