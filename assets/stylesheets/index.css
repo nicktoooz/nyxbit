@@ -1,11 +1,18 @@
 @import './base.css';
+:root {
+  --light-background: #f7f7f7;
+  --dark-background: #151515;
+  --text-dark: #151515;
+  --text-light: #f7f7f7;
+}
+
 * {
   color: #f7f7f7;
   font-family: "Urbanist";
 }
 
 body {
-  background-color: #151515;
+  background-color: var(--dark-background);
 }
 
 header {
