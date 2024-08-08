@@ -218,7 +218,8 @@ main section {
 .work-flex__item .project-tools .project-tools__item {
   padding: 0.4em 1em;
   border-radius: 5px;
-  border: 2px solid rgba(255, 255, 255, 0.4705882353);
+  opacity: 0.6;
+  border: 2px solid white;
 }
 .work-flex__item img {
   -o-object-fit: cover;
