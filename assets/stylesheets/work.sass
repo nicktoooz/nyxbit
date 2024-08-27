@@ -12,8 +12,6 @@ header
 	height: 4em
 	padding: 0 1.5em
 	display: grid
-	position: sticky
-	top: 0
 	z-index: 999
 	place-items: center
 	background-color: #121212
@@ -21,11 +19,14 @@ header
 
 	nav 
 		display: flex
-		gap: 1em
+		max-width: 30em
+		width: 100%
+		justify-content: space-evenly
+
 
 .heading
 	font-size: 2em
-	padding: 1em 0
+	padding: 0 0 1em 0
 
 .hero
 	display: flex
@@ -56,7 +57,8 @@ header
 			gap: 8px
 			
 			.project-tools__item
-				border: 1px solid white
+				border: .5px solid white
+				font-size: 0.9em
 				opacity: 0.7
 				padding: .2em .8em
 				border-radius: 4px
@@ -86,18 +88,25 @@ header
 		margin: auto
 
 .gallery
-	text-align: center
-	
-	.gallery-container
+	display: flex
+	padding: 1.5em .1em
+	flex-direction: column
+	align-items: center
 
+	.gallery-container
+		display: flex
+		flex-wrap: wrap
+		gap: 8px
+		justify-content: center
+		max-width: 35em
+		width: 100%
+	
 		.gallery-container__item
-			display: inline-block
-			aspect-ratio: 9/15
-			width: 12em
+			aspect-ratio: auto
+			width: 10em
 			
 			img
-				width: 100%
-
+				max-width: 100%
 
 .contact 
 	background-color: #f7f7f718

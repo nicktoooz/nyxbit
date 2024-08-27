@@ -26,10 +26,11 @@ header {
   background-color: #121212;
   border-bottom: 1px solid rgba(247, 247, 247, 0.2078431373);
 }
-
 header nav {
   display: flex;
-  gap: 1em;
+  max-width: 30em;
+  width: 100%;
+  justify-content: space-evenly;
 }
 
 .hero {
@@ -158,23 +159,53 @@ main section {
 .skill-flex__item {
   aspect-ratio: 1/1;
   width: 100%;
+  display: grid;
+  place-items: center;
   max-width: 20em;
   border-radius: 1em;
   border: 4px solid rgba(247, 247, 247, 0.1176470588);
   position: relative;
   overflow: hidden;
 }
+.skill-flex__item :first-child {
+  transition: opacity 0.5s ease;
+  width: 10em;
+}
 
 .skill-content {
-  height: 100%;
   opacity: 0;
   position: absolute;
   inset: 0;
+  padding: 1em;
   transition: opacity 1s ease;
+  display: grid;
+  width: 100%;
+  height: 100%;
+  place-items: center;
+  flex-wrap: wrap;
+}
+.skill-content .skill-content__items {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+  gap: 0.5em;
+}
+.skill-content .skill-content__items img {
+  max-width: 3em;
+  height: -moz-fit-content;
+  height: fit-content;
+  aspect-ratio: 1/1;
+}
+
+.skill-flex__item:hover > img {
+  opacity: 0.1;
 }
 
 .skill-flex__item:hover > .skill-content {
   opacity: 1;
+  -webkit-backdrop-filter: blur(2px);
+          backdrop-filter: blur(2px);
 }
 
 .work-flex {
@@ -223,7 +254,8 @@ main section {
   padding: 0.4em 1em;
   border-radius: 5px;
   opacity: 0.6;
-  border: 2px solid white;
+  font-size: 0.8em;
+  border: 0.5px solid white;
 }
 .work-flex__item img {
   -o-object-fit: cover;
