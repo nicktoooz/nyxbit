@@ -290,6 +290,7 @@ main section {
 
 .contact {
   background-color: rgba(247, 247, 247, 0.0941176471);
+  padding: 0 1em;
 }
 
 .contact-grid {
