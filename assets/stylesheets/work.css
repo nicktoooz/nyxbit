@@ -106,8 +106,9 @@ header nav {
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
+  padding: 0 1em;
   justify-content: center;
-  max-width: 35em;
+  max-width: 50em;
   width: 100%;
 }
 .gallery .gallery-container .gallery-container__item {
