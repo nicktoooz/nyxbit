@@ -8,7 +8,7 @@
 
 * {
   color: #f7f7f7;
-  font-family: "Urbanist";
+  font-family: 'Urbanist';
 }
 
 body {
@@ -88,7 +88,10 @@ header nav {
 
 .description {
   background: #272727;
-  padding: 3em 0;
+  height: 20em;
+  display: flex;
+  justify-items: center;
+  align-items: center;
   text-align: center;
 }
 .description .content {
@@ -163,7 +166,7 @@ section {
   aspect-ratio: 1/1;
   width: 8em;
   -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   background-color: #f7f7f7;
   border-radius: 9999px;
 }
@@ -212,7 +215,7 @@ section {
 }
 
 .contact-detail::before {
-  content: "";
+  content: '';
   position: absolute;
   bottom: -10px;
   height: 5px;
@@ -261,4 +264,4 @@ section {
     gap: 2em;
     text-align: center;
   }
-}/*# sourceMappingURL=work.css.map */
+} /*# sourceMappingURL=work.css.map */
