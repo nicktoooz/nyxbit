@@ -1,34 +1,61 @@
 @import './base.css'
 @import './custom-colours'
-* 
+*
   color: #f7f7f7
   font-family: "Urbanist"
 
-body 
+body
   background-color: var(--dark-background)
 
 // HEADER START
-header 
+
+header
+  position: sticky
+  top: 0
   height: 4em
   padding: 0 1.5em
   display: grid
-  position: sticky
-  top: 0
   z-index: 999
   place-items: center
-  background-color: #121212
-  border-bottom: 1px solid #f7f7f735
+  backdrop-filter: blur(16px)
+  -webkit-backdrop-filter: blur(16px)
+  background-color: rgba(18, 18, 18, 0.75)
+  border-bottom: 1px solid rgba(247, 247, 247, 0.06)
 
-  nav 
-      display: flex
-      max-width: 30em
-      width: 100%
-      justify-content: space-evenly
+  nav
+    display: flex
+    max-width: 36em
+    width: 100%
+    justify-content: space-evenly
+    gap: 0.5em
 
+    a
+      opacity: 0.55
+      letter-spacing: 0.02em
+      padding: 0.3em 0.5em
+      transition: opacity 0.2s
+      position: relative
+
+      &::after
+        content: ''
+        position: absolute
+        bottom: 0
+        left: 0.5em
+        right: 0.5em
+        height: 1px
+        background: #f7f7f7
+        transform: scaleX(0)
+        transition: transform 0.22s ease
+
+      &:hover
+        opacity: 1
+
+        &::after
+          transform: scaleX(1)
 // HEADER END
 
 // HERO START
-.hero 
+.hero
   height: 100dvh
   display: flex
   position: relative
@@ -37,12 +64,12 @@ header
   gap: 10em
   flex-direction: column
 
-.hero canvas 
+.hero canvas
   transition: opacity 1s ease 1.5s
   opacity: 0
   position: relative
 
-.hero::before 
+.hero::before
   position: absolute
   inset: 0
   content: ""
@@ -51,10 +78,10 @@ header
   width: 100%
   z-index: 2
 
-.hero canvas.active 
+.hero canvas.active
   opacity: 1
 
-.intro-content 
+.intro-content
   display: flex
   flex-direction: column
   align-items: center
@@ -62,19 +89,19 @@ header
   gap: 10em
   z-index: 30
 
-.name 
+.name
   font-size: 5vw
   opacity: 0
   font-weight: 700
   animation: down 2s ease 500ms forwards
 
-.titles 
+.titles
   font-size: 2rem
   opacity: 0
   margin-top: 1em
   animation: down 2s ease 1000ms forwards
 
-#next-btn 
+#next-btn
   aspect-ratio: 1/1
   width: 5em
   opacity: 0
@@ -83,13 +110,13 @@ header
 // HERO END
 
 // EXPERTISE START
-.heading 
+.heading
   font-size: 3em
   font-weight: 600
   padding: 1.5em 0 1em 0
   text-align: center
 
-main section 
+main section
   padding: 2em 0
   display: flex
   flex-direction: column
@@ -118,34 +145,34 @@ main section
   flex-grow: 1
 
 
-.start 
+.start
     display: flex
     gap: 1em
     width: 95%
     margin-bottom: 1em
 
-    .exp-title 
+    .exp-title
         font-size: 1.75em
         font-weight: 600
 
-    .exp-icon 
+    .exp-icon
         aspect-ratio: 1/1
         width: 4em
 
 // EXPERTISE END
 
 // SKILLS START
-.skills 
+.skills
   margin-top: 2em
   width: 100%
 
-.skill-flex 
+.skill-flex
   display: flex
   justify-content: center
   align-items: center
   gap: 1em
 
-.skill-flex__item 
+.skill-flex__item
   aspect-ratio: 1/1
   width: 100%
   display: grid
@@ -160,7 +187,7 @@ main section
     transition: opacity .5s ease
     width: 10em
 
-.skill-content 
+.skill-content
   opacity: 0
   position: absolute
   inset: 0
@@ -173,8 +200,8 @@ main section
   flex-wrap: wrap
 
 
-  
-  
+
+
   .skill-content__items
     display: flex
     flex-wrap: wrap
@@ -184,20 +211,20 @@ main section
 
     img
       max-width: 3em
-      height: fit-content    
+      height: fit-content
       aspect-ratio: 1/1
 
 .skill-flex__item:hover > img
   opacity: 0.1
 
-.skill-flex__item:hover > .skill-content 
+.skill-flex__item:hover > .skill-content
   opacity: 1
   backdrop-filter: blur(2px)
 
 // SKILLS END
 
 // WORK START
-.work-flex 
+.work-flex
   display: flex
   flex-wrap: wrap
   justify-content: center
@@ -205,7 +232,7 @@ main section
   padding: 0 1em
   width: 100%
 
-.work-flex__item 
+.work-flex__item
   max-width: 20em
   aspect-ratio: 10/15
   width: 100%
@@ -217,10 +244,10 @@ main section
   background: linear-gradient(to right, #191919, #111111)
   transition: transform 300ms ease, opacity 1000ms ease
 
-  &.active 
+  &.active
     opacity: 1
 
-  .project-title 
+  .project-title
     font-size: 2em
     font-weight: 600
     position: absolute
@@ -228,7 +255,7 @@ main section
     left: 1em
     z-index: 20
 
-  .project-tools 
+  .project-tools
     display: flex
     gap: 0.5em
     z-index: 10
@@ -238,24 +265,24 @@ main section
     top: 1em
     right: 1em
 
-    .project-tools__item 
+    .project-tools__item
       padding: 0.4em 1em
       border-radius: 5px
       opacity: 0.6
       font-size: 0.8em
       border: .5px solid white
 
-  img 
+  img
     object-fit: cover
     position: absolute
     width: 100%
     bottom: 0
     transition: transform 300ms ease
 
-  &:hover 
+  &:hover
     transform: scale(1.02)
 
-    img 
+    img
       transform: scale(1.1)
 
 
@@ -279,75 +306,75 @@ main section
 //CERTIFICATIONS END
 
 // CONTACT START
-.contact 
+.contact
   background-color: #f7f7f718
   padding: 0 1em
 
-.contact-grid 
+.contact-grid
   display: grid
   width: 100%
   padding: 5em 1em
   grid-template-columns: auto auto
   max-width: 100em
 
-.contact-grid__item 
+.contact-grid__item
   flex: 1
 
-.contact-grid__item.start 
+.contact-grid__item.start
   display: grid
   align-content: center
   gap: 2em
 
-.contact-grid__item.end 
+.contact-grid__item.end
   display: flex
   gap: 2em
   justify-self: end
   flex-direction: column
   justify-content: center
 
-.avatar 
+.avatar
   aspect-ratio: 1/1
   width: 8em
   object-fit: cover
   background-color: #f7f7f7
   border-radius: 9999px
 
-.socials 
+.socials
   display: flex
   gap: 1em
   width: 100%
   flex-wrap: wrap
 
-.social__item 
+.social__item
   aspect-ratio: 1/1
   width: 3em
 
-.start-info 
+.start-info
   display: flex
   gap: 2em
   align-items: center
 
-.contact-name 
+.contact-name
   font-size: 2.5em
   font-weight: 700
 
-.contact-grid__item.end h1 
+.contact-grid__item.end h1
   font-size: 2.5em
   font-weight: 700
 
-.contact-info 
+.contact-info
   display: flex
   gap: 5em
 
-.contact-info .label 
+.contact-info .label
   font-size: 1.8em
   margin-bottom: 0.5em
 
-.contact-detail 
+.contact-detail
   font-size: 1.4em
   position: relative
 
-.contact-detail::before 
+.contact-detail::before
   content: ""
   position: absolute
   bottom: -10px
@@ -357,71 +384,71 @@ main section
 
 // CONTACT END
 
-@media (max-width: 769px) 
-  section:nth-child(n + 1) 
+@media (max-width: 769px)
+  section:nth-child(n + 1)
     padding: 1em
 
-  .intro-content 
+  .intro-content
     text-align: center
 
-  .name 
+  .name
     font-size: 14vw
 
-  .expertise-flex 
+  .expertise-flex
     width: 100%
     flex-direction: column
     align-items: center
 
-  .expertise-flex__item 
+  .expertise-flex__item
     width: 100%
     height: 20em
 
-  .work-flex__item 
+  .work-flex__item
     width: 100%
 
-  .skill-flex 
+  .skill-flex
     flex-direction: column
 
-  .contact-grid 
+  .contact-grid
     grid-template-columns: auto
     gap: 5em
 
-  .contact-grid__item.start 
+  .contact-grid__item.start
     justify-items: center
 
-  .contact-grid__item.end 
+  .contact-grid__item.end
     justify-self: center
 
-  .socials 
+  .socials
     justify-content: center
 
-  .contact-info 
+  .contact-info
     flex-direction: column
 
-  .start-info 
+  .start-info
     display: flex
     flex-direction: column
     gap: 2em
     text-align: center
 
-@keyframes appear 
-  from 
+@keyframes appear
+  from
     opacity: 0
 
-  to 
+  to
     opacity: 1
 
-@keyframes down 
-  from 
+@keyframes down
+  from
     transform: translateY(0)
 
-  to 
+  to
     opacity: 1
     transform: translateY(10px)
 
-@keyframes bounce 
-  from 
+@keyframes bounce
+  from
     transform: translate(0)
 
-  to 
+  to
     transform: translateY(10px)
