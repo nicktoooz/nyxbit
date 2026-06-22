@@ -103,6 +103,7 @@ header nav a:hover::after {
   font-size: 5vw;
   opacity: 0;
   font-weight: 700;
+  letter-spacing: -0.02em;
   animation: down 2s ease 500ms forwards;
 }
 
@@ -133,6 +134,7 @@ main section {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  scroll-margin-top: 4em;
 }
 
 .expertise-flex {
@@ -146,14 +148,22 @@ main section {
   min-width: 20em;
   max-height: 20em;
   aspect-ratio: 1/1;
-  border-radius: 0.5em;
+  border-radius: 0.75em;
   display: flex;
   flex-direction: column;
   justify-content: center;
   padding: 5em 2em;
-  outline: 4px solid rgba(255, 255, 255, 0.1215686275);
-  background: linear-gradient(to right, #191919, #111111);
+  border: 1px solid rgba(247, 247, 247, 0.07);
+  background: linear-gradient(135deg, rgba(30, 30, 30, 0.8), rgba(16, 16, 16, 0.9));
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
   flex-grow: 1;
+  transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+.expertise-flex__item:hover {
+  transform: translateY(-4px);
+  border-color: rgba(247, 247, 247, 0.14);
+  box-shadow: 0 20px 48px rgba(0, 0, 0, 0.4);
 }
 
 .start {
@@ -189,10 +199,17 @@ main section {
   display: grid;
   place-items: center;
   max-width: 20em;
-  border-radius: 0.5em;
-  border: 4px solid rgba(247, 247, 247, 0.1176470588);
+  border-radius: 0.75em;
+  border: 1px solid rgba(247, 247, 247, 0.07);
+  background: linear-gradient(135deg, rgba(30, 30, 30, 0.8), rgba(16, 16, 16, 0.9));
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
   position: relative;
   overflow: hidden;
+  transition: border-color 0.3s ease;
+}
+.skill-flex__item:hover {
+  border-color: rgba(247, 247, 247, 0.14);
 }
 .skill-flex__item :first-child {
   transition: opacity 0.5s ease;
@@ -247,13 +264,13 @@ main section {
   max-width: 20em;
   aspect-ratio: 10/15;
   width: 100%;
-  border-radius: 0.5em;
+  border-radius: 0.75em;
   position: relative;
   overflow: hidden;
   opacity: 0;
-  outline: 4px solid rgba(255, 255, 255, 0.1215686275);
-  background: linear-gradient(to right, #191919, #111111);
-  transition: transform 300ms ease, opacity 1000ms ease;
+  border: 1px solid rgba(247, 247, 247, 0.07);
+  background: linear-gradient(135deg, rgba(30, 30, 30, 0.8), rgba(16, 16, 16, 0.9));
+  transition: transform 300ms ease, opacity 1000ms ease, border-color 300ms ease, box-shadow 300ms ease;
 }
 .work-flex__item.active {
   opacity: 1;
@@ -278,10 +295,13 @@ main section {
 }
 .work-flex__item .project-tools .project-tools__item {
   padding: 0.4em 1em;
-  border-radius: 5px;
-  opacity: 0.6;
-  font-size: 0.8em;
-  border: 0.5px solid white;
+  border-radius: 100px;
+  opacity: 0.7;
+  font-size: 0.75em;
+  letter-spacing: 0.04em;
+  border: 1px solid rgba(247, 247, 247, 0.3);
+  background: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(4px);
 }
 .work-flex__item img {
   -o-object-fit: cover;
@@ -293,6 +313,8 @@ main section {
 }
 .work-flex__item:hover {
   transform: scale(1.02);
+  border-color: rgba(247, 247, 247, 0.14);
+  box-shadow: 0 20px 48px rgba(0, 0, 0, 0.5);
 }
 .work-flex__item:hover img {
   transform: scale(1.1);
@@ -308,14 +330,26 @@ main section {
   justify-content: center;
   gap: 1em;
 }
-.certification-container img {
+.certification-container .certification__item {
+  border-radius: 0.5em;
+  overflow: hidden;
+  display: block;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.certification-container .certification__item img {
   max-width: 40em;
   width: 100%;
   aspect-ratio: 1.35/1;
+  display: block;
+}
+.certification-container .certification__item:hover {
+  transform: scale(1.02);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.5);
 }
 
 .contact {
-  background-color: rgba(247, 247, 247, 0.0941176471);
+  background-color: #111111;
+  border-top: 1px solid rgba(247, 247, 247, 0.05);
   padding: 0 1em;
 }
 
@@ -364,6 +398,11 @@ main section {
 .social__item {
   aspect-ratio: 1/1;
   width: 3em;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+.social__item:hover {
+  opacity: 0.75;
+  transform: translateY(-2px);
 }
 
 .start-info {
@@ -407,6 +446,18 @@ main section {
 }
 
 @media (max-width: 769px) {
+  header {
+    padding: 0 1em;
+  }
+  header nav {
+    max-width: 100%;
+    font-size: 0.82em;
+    gap: 0;
+  }
+  header nav a {
+    padding: 0.3em 0.3em;
+    letter-spacing: 0;
+  }
   section:nth-child(n+1) {
     padding: 1em;
   }
